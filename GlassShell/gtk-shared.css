@@ -1,0 +1,302 @@
+/*
+ * GlassShell GTK layer
+ * Imports Yaru-dark first, then applies dark-glass app/window styling.
+ */
+
+@define-color glass_bg #070b14;
+@define-color glass_surface rgba(16, 22, 34, 0.82);
+@define-color glass_surface_2 rgba(30, 41, 59, 0.78);
+@define-color glass_border rgba(255, 255, 255, 0.14);
+@define-color glass_border_strong rgba(255, 255, 255, 0.22);
+@define-color glass_text #eef7ff;
+@define-color glass_muted #94a3b8;
+@define-color glass_accent #7dd3fc;
+@define-color glass_accent_2 #a855f7;
+@define-color glass_accent_3 #f0abfc;
+@define-color glass_danger #fb7185;
+
+window,
+dialog,
+messagedialog,
+popover,
+tooltip {
+  color: @glass_text;
+}
+
+window.background,
+.background,
+dialog.background {
+  background-color: @glass_bg;
+  color: @glass_text;
+}
+
+headerbar,
+headerbar.titlebar,
+.titlebar,
+windowhandle > box {
+  background-image: image(#101622);
+  background-color: @glass_surface;
+  border-bottom: 1px solid @glass_border;
+  color: @glass_text;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.24);
+}
+
+headerbar:backdrop,
+headerbar.titlebar:backdrop,
+.titlebar:backdrop {
+  background-image: image(#0a0f1a);
+  background-color: rgba(10, 15, 26, 0.82);
+  color: @glass_muted;
+  border-bottom-color: rgba(255, 255, 255, 0.09);
+}
+
+.titlebar .title,
+headerbar .title {
+  color: @glass_text;
+  font-weight: 600;
+}
+
+.titlebar .subtitle,
+headerbar .subtitle {
+  color: @glass_muted;
+}
+
+box.view,
+viewport,
+scrolledwindow,
+textview,
+list,
+listview,
+columnview,
+treeview,
+flowbox,
+gridview {
+  background-color: @glass_bg;
+  color: @glass_text;
+}
+
+frame,
+frame > border,
+statusbar,
+separator,
+paned > separator {
+  border-color: @glass_border;
+  color: @glass_muted;
+}
+
+card,
+.card,
+.view,
+preferencespage > scrolledwindow > viewport > clamp > box > preferencesgroup,
+preferencesgroup > box {
+  background-color: @glass_surface;
+  color: @glass_text;
+}
+
+row,
+list row,
+listview row,
+treeview.view {
+  background-color: transparent;
+  color: @glass_text;
+}
+
+row:hover,
+list row:hover,
+listview row:hover,
+treeview.view:hover {
+  background-color: rgba(125, 211, 252, 0.10);
+}
+
+row:selected,
+list row:selected,
+listview row:selected,
+treeview.view:selected,
+calendar:selected {
+  background-image: linear-gradient(to right, #0891b2, #a855f7);
+  background-color: @glass_accent;
+  color: #ffffff;
+}
+
+button,
+menubutton > button,
+dropdown > button,
+combobox > box > button,
+spinbutton,
+entry,
+searchentry,
+textview,
+textarea {
+  background-image: image(#1e293b);
+  background-color: @glass_surface_2;
+  border: 1px solid @glass_border;
+  color: @glass_text;
+  box-shadow: none;
+}
+
+button:hover,
+menubutton > button:hover,
+dropdown > button:hover,
+combobox > box > button:hover {
+  background-image: image(#334155);
+  background-color: rgba(51, 65, 85, 0.86);
+  border-color: @glass_border_strong;
+}
+
+button:active,
+button:checked,
+button.suggested-action,
+button.suggested-action:hover {
+  background-image: linear-gradient(to right, #0891b2, #a855f7);
+  background-color: @glass_accent;
+  border-color: rgba(125, 211, 252, 0.50);
+  color: #ffffff;
+}
+
+button.destructive-action,
+button.destructive-action:hover {
+  background-image: image(@glass_danger);
+  background-color: @glass_danger;
+  border-color: rgba(248, 81, 73, 0.65);
+  color: #ffffff;
+}
+
+entry,
+searchentry,
+spinbutton,
+textview text,
+textarea {
+  background-image: image(#070b14);
+  background-color: rgba(7, 11, 20, 0.78);
+  color: @glass_text;
+}
+
+entry:focus,
+searchentry:focus,
+spinbutton:focus,
+textview:focus,
+textarea:focus,
+button:focus {
+  border-color: rgba(125, 211, 252, 0.74);
+  box-shadow: inset 0 0 0 1px rgba(125, 211, 252, 0.40);
+}
+
+entry selection,
+textview text selection,
+label selection {
+  background-color: @glass_accent;
+  color: #ffffff;
+}
+
+popover,
+popover.background,
+menu,
+menuitem,
+.context-menu {
+  background-color: @glass_surface;
+  border-color: @glass_border;
+  color: @glass_text;
+}
+
+popover contents {
+  background-color: @glass_surface;
+  border: 1px solid @glass_border;
+  border-radius: 8px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.52);
+}
+
+menuitem:hover,
+modelbutton:hover {
+  background-color: rgba(125, 211, 252, 0.14);
+  color: #ffffff;
+}
+
+notebook > header {
+  background-color: @glass_bg;
+  border-color: @glass_border;
+}
+
+notebook > header > tabs > tab {
+  color: @glass_muted;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+notebook > header > tabs > tab:checked {
+  color: @glass_text;
+  border-color: @glass_accent;
+}
+
+switch {
+  background-color: rgba(51, 65, 85, 0.86);
+  border-color: @glass_border;
+}
+
+switch:checked {
+  background-image: linear-gradient(to right, #0891b2, #a855f7);
+  background-color: @glass_accent;
+}
+
+checkbutton check,
+radiobutton radio,
+check,
+radio {
+  background-color: rgba(7, 11, 20, 0.78);
+  border-color: @glass_border_strong;
+  color: @glass_text;
+}
+
+checkbutton check:checked,
+radiobutton radio:checked,
+check:checked,
+radio:checked {
+  background-color: @glass_accent;
+  border-color: @glass_accent;
+  color: #ffffff;
+}
+
+scale trough,
+progressbar trough,
+levelbar trough {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+scale highlight,
+progressbar progress,
+levelbar block.filled {
+  background-image: linear-gradient(to right, #0891b2, #a855f7);
+  background-color: @glass_accent;
+}
+
+scrollbar slider {
+  background-color: rgba(148, 163, 184, 0.55);
+  border-radius: 999px;
+  min-width: 6px;
+  min-height: 6px;
+}
+
+scrollbar slider:hover {
+  background-color: rgba(226, 232, 240, 0.72);
+}
+
+tooltip,
+tooltip.background {
+  background-color: rgba(3, 7, 18, 0.94);
+  border: 1px solid @glass_border;
+  color: @glass_text;
+}
+
+infobar,
+.osd {
+  background-color: rgba(16, 22, 34, 0.88);
+  border: 1px solid @glass_border;
+  color: @glass_text;
+}
+
+.dim-label,
+label.dim-label,
+label:disabled,
+button:disabled,
+entry:disabled {
+  color: rgba(148, 163, 184, 0.72);
+}

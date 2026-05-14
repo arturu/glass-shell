@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=GlassShell
+Type=X-GNOME-Metatheme
+Comment=Dark glass theme for GNOME Shell and GTK based on Yaru-dark
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=GlassShell
+MetacityTheme=Yaru-dark
+IconTheme=Yaru-dark
+CursorTheme=Yaru
+CursorSize=24
+X-Yaru-Dark=true
+X-Yaru-Accent-Name=purple
+X-Yaru-Accent-Color=#7dd3fc
