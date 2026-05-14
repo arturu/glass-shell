@@ -37,11 +37,10 @@ That means CSS changes in this repository are immediately reflected in the insta
 For GNOME Shell changes, reload the shell theme after editing:
 
 ```sh
-gsettings reset org.gnome.shell.extensions.user-theme name
-gsettings set org.gnome.shell.extensions.user-theme name GlassShell
+./reload.sh
 ```
 
-On X11 you can also press `Alt+F2`, type `r`, and press Enter to restart GNOME Shell. On Wayland, log out and back in if the shell does not reload cleanly.
+The script toggles the User Themes setting and reapplies the GTK theme. On X11 you can also press `Alt+F2`, type `r`, and press Enter to restart GNOME Shell. On Wayland, log out and back in if the shell does not reload cleanly.
 
 For GTK changes, close and reopen the application being tested.
 
