@@ -13,7 +13,9 @@ missing=0
 for dependency in \
   /usr/share/themes/Yaru-dark/gnome-shell/gnome-shell.css \
   /usr/share/themes/Yaru-dark/gtk-3.0/gtk.css \
-  /usr/share/themes/Yaru-dark/gtk-4.0/gtk.css
+  /usr/share/themes/Yaru-dark/gtk-3.0/gtk.gresource \
+  /usr/share/themes/Yaru-dark/gtk-4.0/gtk.css \
+  /usr/share/themes/Yaru-dark/gtk-4.0/gtk.gresource
 do
   if [ ! -f "$dependency" ]; then
     echo "Missing dependency: $dependency" >&2

@@ -14,7 +14,7 @@ stage {
   background-gradient-start: rgba(6, 10, 18, 0.70);
   background-gradient-end: rgba(17, 14, 33, 0.72);
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.36);
+  box-shadow: 0 0 7px rgba(30, 30, 30, 0.80);
 }
 
 #panel .panel-button {
@@ -52,7 +52,7 @@ stage {
   background-gradient-end: rgba(7, 11, 20, 0.86);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
-  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.52);
+  -st-shadow: 0 0 7px rgba(30, 30, 30, 0.80);
   color: #eef7ff;
 }
 
@@ -155,7 +155,7 @@ stage {
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
   color: #eef7ff;
-  box-shadow: 0 28px 88px rgba(0, 0, 0, 0.62);
+  -st-shadow: 0 0 7px rgba(30, 30, 30, 0.80);
 }
 
 .modal-dialog-button,

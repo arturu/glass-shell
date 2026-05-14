@@ -34,20 +34,22 @@ headerbar,
 headerbar.titlebar,
 .titlebar,
 windowhandle > box {
-  background-image: image(#101622);
+  background-image: linear-gradient(120deg, rgba(17, 24, 39, 0.92), rgba(14, 26, 44, 0.88) 52%, rgba(38, 24, 60, 0.84));
   background-color: @glass_surface;
   border-bottom: 1px solid @glass_border;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
   color: @glass_text;
-  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0 7px rgba(30, 30, 30, 0.80);
 }
 
 headerbar:backdrop,
 headerbar.titlebar:backdrop,
 .titlebar:backdrop {
-  background-image: image(#0a0f1a);
+  background-image: linear-gradient(120deg, rgba(10, 15, 26, 0.84), rgba(13, 18, 31, 0.78) 52%, rgba(24, 18, 36, 0.72));
   background-color: rgba(10, 15, 26, 0.82);
   color: @glass_muted;
   border-bottom-color: rgba(255, 255, 255, 0.09);
+  border-top-color: rgba(255, 255, 255, 0.06);
 }
 
 .titlebar .title,
@@ -89,6 +91,7 @@ card,
 .view,
 preferencespage > scrolledwindow > viewport > clamp > box > preferencesgroup,
 preferencesgroup > box {
+  background-image: linear-gradient(145deg, rgba(16, 22, 34, 0.84), rgba(11, 17, 29, 0.82));
   background-color: @glass_surface;
   color: @glass_text;
 }
@@ -124,10 +127,8 @@ dropdown > button,
 combobox > box > button,
 spinbutton,
 entry,
-searchentry,
-textview,
-textarea {
-  background-image: image(#1e293b);
+searchentry {
+  background-image: linear-gradient(to bottom, rgba(43, 56, 78, 0.82), rgba(22, 31, 49, 0.80));
   background-color: @glass_surface_2;
   border: 1px solid @glass_border;
   color: @glass_text;
@@ -138,7 +139,7 @@ button:hover,
 menubutton > button:hover,
 dropdown > button:hover,
 combobox > box > button:hover {
-  background-image: image(#334155);
+  background-image: linear-gradient(to bottom, rgba(63, 78, 105, 0.90), rgba(32, 45, 68, 0.88));
   background-color: rgba(51, 65, 85, 0.86);
   border-color: @glass_border_strong;
 }
@@ -155,7 +156,7 @@ button.suggested-action:hover {
 
 button.destructive-action,
 button.destructive-action:hover {
-  background-image: image(@glass_danger);
+  background-image: linear-gradient(to right, #e11d48, #fb7185);
   background-color: @glass_danger;
   border-color: rgba(248, 81, 73, 0.65);
   color: #ffffff;
@@ -166,9 +167,46 @@ searchentry,
 spinbutton,
 textview text,
 textarea {
-  background-image: image(#070b14);
+  background-image: none;
   background-color: rgba(7, 11, 20, 0.78);
   color: @glass_text;
+}
+
+vte-terminal,
+terminal-screen,
+.terminal-screen {
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+headerbar button,
+headerbar.titlebar button,
+.titlebar button,
+windowhandle button {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  background-color: rgba(15, 23, 42, 0.42);
+  border-color: rgba(255, 255, 255, 0.12);
+  border-radius: 7px;
+  color: @glass_text;
+}
+
+headerbar button:hover,
+headerbar.titlebar button:hover,
+.titlebar button:hover,
+windowhandle button:hover {
+  background-image: linear-gradient(to bottom, rgba(125, 211, 252, 0.26), rgba(168, 85, 247, 0.18));
+  border-color: rgba(125, 211, 252, 0.32);
+}
+
+headerbar button.close:hover,
+headerbar.titlebar button.close:hover,
+.titlebar button.close:hover,
+windowhandle button.close:hover {
+  background-image: linear-gradient(to bottom, rgba(251, 113, 133, 0.90), rgba(190, 18, 60, 0.90));
+  border-color: rgba(251, 113, 133, 0.70);
+  color: #ffffff;
 }
 
 entry:focus,
@@ -193,16 +231,18 @@ popover.background,
 menu,
 menuitem,
 .context-menu {
+  background-image: linear-gradient(145deg, rgba(16, 22, 34, 0.90), rgba(9, 14, 25, 0.86));
   background-color: @glass_surface;
   border-color: @glass_border;
   color: @glass_text;
 }
 
 popover contents {
+  background-image: linear-gradient(145deg, rgba(16, 22, 34, 0.90), rgba(9, 14, 25, 0.86));
   background-color: @glass_surface;
   border: 1px solid @glass_border;
   border-radius: 8px;
-  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.52);
+  box-shadow: 0 0 7px rgba(30, 30, 30, 0.80);
 }
 
 menuitem:hover,
@@ -288,6 +328,7 @@ tooltip.background {
 
 infobar,
 .osd {
+  background-image: linear-gradient(135deg, rgba(16, 22, 34, 0.90), rgba(18, 27, 44, 0.86) 52%, rgba(32, 21, 48, 0.82));
   background-color: rgba(16, 22, 34, 0.88);
   border: 1px solid @glass_border;
   color: @glass_text;
